@@ -22,3 +22,17 @@ html {
   font-size: 20px;
   font-weight: bold;
 }
+
+.modal-card-head {
+  background-color: rgb(206, 168, 0);
+}
+.modal-card-body {
+  background-color: rgb(107, 134, 255);
+}
+
+li {
+  font-size: 20px;
+  border-bottom: 2px dashed white;
+  color: white;
+  font-weight: bold;
+}

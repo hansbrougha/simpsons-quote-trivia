@@ -33,8 +33,30 @@
       <button class="button is-info">View High Scores!</button>
     </div>
     </section>
+
+    <main>
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">High Scores</p>
+            <button class="delete exit-modal" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+            <ul id="high-score-list">
+              <li>Test 1</li>
+              <li>Test 2</li>
+            </ul>
+          </section>
+          <footer class="modal-card-foot">            
+            <button class="button exit-modal">Exit</button>
+          </footer>
+        </div>
+      </div>
+    </main>
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="Assets/scripts/scripts.js"></script>
+    <script src="assets/script/script.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/script/questions.js"></script>
