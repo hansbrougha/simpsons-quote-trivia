@@ -85,9 +85,24 @@
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<<<<<<< Updated upstream
     <script src="assets/script/script.js"></script>
 gi
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/script/questions.js"></script>
+=======
+    <script src="Assets/scripts/scripts.js"></script>
+    <script>
+       $.ajax({
+        url: "https://thesimpsonsquoteapi.glitch.me/quotes",
+        method: "GET"
+      })
+        // After data comes back from the request
+        .then(function(response) {
+          console.log(response)
+          console.log(response[0].character)
+        });
+    </script>
+>>>>>>> Stashed changes
   </body>
 </html>
