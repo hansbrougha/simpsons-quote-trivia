@@ -1,0 +1,21 @@
+html{
+    background-color: rgb(228, 186, 0);
+}
+
+#start-page{
+    width: 40%;
+    margin: 0 auto;
+    background-color: rgb(206, 168, 0);
+    border-radius: 10px;
+    height: auto;
+    margin-top: 10%;
+    text-align: center;
+    padding: 3%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+#homer-start-pic{
+    width: 100px;
+}
