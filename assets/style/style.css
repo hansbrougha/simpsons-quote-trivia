@@ -10,7 +10,7 @@ html {
   padding: 3%;
 }
 
-#start-page {
+#start-page, #user-score {
   width: 40%;
   margin: 0 auto;
   background-color: rgb(206, 168, 0);
@@ -21,6 +21,10 @@ html {
   padding: 3%;
   font-size: 20px;
   font-weight: bold;
+}
+
+#user-score{
+  display: none;
 }
 
 .modal-card-head {
