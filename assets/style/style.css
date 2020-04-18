@@ -36,3 +36,8 @@ li {
   color: white;
   font-weight: bold;
 }
+
+.footer {
+  background-color: rgb(206, 168, 0);
+  margin-top: 10%;
+}
