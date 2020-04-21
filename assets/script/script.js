@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 var startBtn = $('#start-btn')
 
 //removes start page div
@@ -16,7 +15,6 @@ $(".is-info").click(function(){
 $(".exit-modal").click(function(){
     highScoreModal.removeClass("is-active")
 })
-=======
 var score= "good"
 var simpsonsurl = "http://api.giphy.com/v1/gifs/search?q="+ score +"+simpsonsling&api_key=Rpk0iiKiEri4SFv9B1aOmJlCb0UllXnN"
 
@@ -31,4 +29,3 @@ $.ajax({
       console.log(response[0].character)
       Rpk0iiKiEri4SFv9B1aOmJlCb0UllXnN
     });
->>>>>>> Stashed changes
