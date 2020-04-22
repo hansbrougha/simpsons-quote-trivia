@@ -39,6 +39,10 @@ for(var i = 0; i<5; i++){
     $(buttons).text(characters[characters.length-i]);
 }
 
+// Display Quote at top
+
+$("#quote-here").text(quotes[quotes.length-3]);
+
 // Display character on button randomly
 
 });
