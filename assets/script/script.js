@@ -3,6 +3,7 @@ var startBtn = $('#start-btn')
 //removes start page div
 startBtn.click(function(){
 $('#start-page').attr("style","display: none")
+$('.questions').attr("style","display: block")
 })
 
 //displays high score modal
