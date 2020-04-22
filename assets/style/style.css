@@ -7,7 +7,11 @@ html {
   margin: 0 auto;
   height: auto;
   text-align: center;
-  padding: 3%;
+  padding: 10px;
+}
+
+.hero-body{
+  padding: 0px;
 }
 
 #start-page,
