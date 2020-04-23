@@ -10,7 +10,7 @@ html {
   padding: 10px;
 }
 
-.hero-body{
+.hero-body {
   padding: 0px;
 }
 
@@ -68,7 +68,18 @@ li {
   background-color: rgb(206, 168, 0);
 }
 
+.graphic {
+  width: 30%;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 10px;
+  height: 80%;
+  text-align: center;
+  position: initial;
+}
+
 .footer {
   background-color: rgb(206, 168, 0);
   margin-top: 10%;
+  padding-top: 10px;
 }
