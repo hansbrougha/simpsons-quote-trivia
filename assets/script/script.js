@@ -10,6 +10,7 @@ $('.questions').attr("style","display: block")
 highScoreModal =  $('.modal')
 $(".is-info").click(function(){
     highScoreModal.addClass("is-active")
+    displayScore()
 })
 
 //removes high score modal

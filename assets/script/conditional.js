@@ -1,6 +1,12 @@
-var score = ""
+jQuery.ajaxPrefilter(function (options) {
+    if (options.crossDomain && jQuery.support.cors) {
+        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+    }
+});
+// set score to our default image and update on completion of game
+var score = "random"
 var totalPoints = 0
-
+// var simpsonsurl = "api.giphy.com/v1/gifs/search?q=" + score + "+simpsons&api_key=Rpk0iiKiEri4SFv9B1aOmJlCb0UllXnN"
 
 function displayScore() {
     score = ""
