@@ -29,6 +29,7 @@ method: "GET"
 console.log(quotes);
 console.log(characters);
 
+
 window.localStorage.setItem("characters", JSON.stringify(characters));
 window.localStorage.setItem("quotes", JSON.stringify(quotes));
 
@@ -44,6 +45,7 @@ for(var i = 0; i<5; i++){
 $("#quote-here").text(quotes[quotes.length-3]);
 
 // Display character on button randomly
+
 
 });
 

@@ -36,8 +36,8 @@
     </main>
 
     <!-- High score div -->
-    <section>
-      <div class="modal">
+    <section >
+      <div id="high-score-modal" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
           <header class="modal-card-head">
@@ -71,16 +71,34 @@
     <main class="questions">
       <div class="tile is-parent">
         <article class="tile is-child notification is-link">
+
           <h1 id="quote-here">Quote here</h1>
           <button id="button-1" class="button answer">Answer 1 test</button>
           <button id="button-2" class="button answer">Answer 2 test</button>
           <button id="button-3" class="button answer">Answer 3 test</button>
           <button id="button-4" class="button answer">Answer 4 test</button>
+
           <div class="content">
           </div>
     </main>
     
 
+<!-- Modal for user's name input -->
+<section>
+  <div id="user-input-modal" class="modal" >
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">What should we call you</p>
+        <button class="delete exit-modal" aria-label="close"></button>
+      </header>
+      <input type="text" placeholder="Enter Name Here...">
+      <footer class="modal-card-foot">
+        <button class="button exit-modal">Exit</button>
+      </footer>
+    </div>
+  </div>
+</section>
     <footer class="footer">
       <div class="content has-text-centered">
         

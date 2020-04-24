@@ -7,7 +7,7 @@ $('.questions').attr("style","display: block")
 })
 
 //displays high score modal
-highScoreModal =  $('.modal')
+highScoreModal =  $('#high-score-modal')
 $(".is-info").click(function(){
     highScoreModal.addClass("is-active")
     displayScore()
@@ -16,6 +16,7 @@ $(".is-info").click(function(){
 //removes high score modal
 $(".exit-modal").click(function(){
     highScoreModal.removeClass("is-active")
+    $('#user-input-modal').removeClass("is-active")
 })
 var score= "good"
 var simpsonsurl = "http://api.giphy.com/v1/gifs/search?q="+ score +"+simpsonsling&api_key=Rpk0iiKiEri4SFv9B1aOmJlCb0UllXnN"
