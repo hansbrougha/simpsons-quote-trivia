@@ -5,7 +5,7 @@ var quotes = JSON.parse(window.localStorage.getItem("quotes")) || [];
 
 console.log(quotes);
 console.log(characters);
-
+var totalPoints = 3
 $.ajax({
 url: "https://thesimpsonsquoteapi.glitch.me/quotes?count=25",
 method: "GET"

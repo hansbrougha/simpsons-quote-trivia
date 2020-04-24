@@ -5,7 +5,7 @@ jQuery.ajaxPrefilter(function (options) {
 });
 // set score to our default image and update on completion of game
 var score = "random"
-var totalPoints = 0
+// var totalPoints = 1
 
 
 function displayScore() {
