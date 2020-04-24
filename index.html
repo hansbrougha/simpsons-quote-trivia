@@ -85,16 +85,16 @@
 
 <!-- Modal for user's name input -->
 <section>
-  <div id="user-input-modal" class="modal" >
+  <div id="user-input-modal" class="modal is-active" >
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
         <p class="modal-card-title">What should we call you</p>
         <button class="delete exit-modal" aria-label="close"></button>
       </header>
-      <input type="text" placeholder="Enter Name Here...">
+      <input type="text" id="userName" placeholder="Enter Name Here...">
       <footer class="modal-card-foot">
-        <button class="button exit-modal">Exit</button>
+        <button class="button exit-modal" id="submitName">submit</button>
       </footer>
     </div>
   </div>
