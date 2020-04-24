@@ -11,6 +11,7 @@ highScoreModal =  $('#high-score-modal')
 $(".is-info").click(function(){
     highScoreModal.addClass("is-active")
     displayScore()
+    printHighscores()
 })
 
 //removes high score modal
