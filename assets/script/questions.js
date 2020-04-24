@@ -1,6 +1,8 @@
 $(document).ready(function(){
 // Do until 4 unique characters and quotes
 
+var totalPoints=0;
+
 var characters = JSON.parse(window.localStorage.getItem("characters")) || [""];
 var quotes = JSON.parse(window.localStorage.getItem("quotes")) || [""];
 
@@ -68,20 +70,22 @@ console.log("characters", characters);
   // totalPoints++ everytime correct awnser
 
   function getQuestion(){
-      var currentQuestion = quotes[currentQuestionIndex];
-      //console.log(currentQuestion);
-      //console.log(currentQuestionIndex);
-      // change quesition text
+    var currentQuestion = quotes[currentQuestionIndex];
+    //console.log(currentQuestion);
+    console.log(currentQuestionIndex);
+    // change quesition text
 
-      var random = Math.floor(Math.random()*4);
+    var random = Math.floor(Math.random()*4)+1;
+    console.log("random", random);
 
-      // Get correct answer
-      var correct = characters[4*currentQuestionIndex-random];
-      console.log(correct);
-      //console.log("correct", correct);
+    // Get correct answer
+    var correct = characters[currentQuestionIndex+ random];
+    console.log("correct", correct);
 
-      $("#quote-here").text(quotes[4*currentQuestionIndex - random]);
-        console.log("quote", quotes[4*currentQuestionIndex - random])
+    $("#quote-here").text(quotes[currentQuestionIndex + random]);
+    console.log("quote", quotes[currentQuestionIndex + random])
+
+    // Display correct answer
     // display options per question
 
     for(var i = 1; i<5; i++){
@@ -89,27 +93,53 @@ console.log("characters", characters);
         //console.log(buttons)
         $(buttons).text(characters[currentQuestionIndex*i]);
         //console.log(characters[4*currentQuestionIndex+i]);
-        console.log("button text", characters[(currentQuestionIndex*i)]);
-        $(buttons).click(function(){questionClick(correct)});
+        //console.log("button text", characters[(currentQuestionIndex*i)]);
+        $(buttons).val(characters[currentQuestionIndex*i]);
+        
+        //console.log("$(buttons).val()", $(buttons).val());
+    
     }
+
+    check(correct, buttons, random);
+    console.log("#button-1", $("#button-1").val());
+    console.log("#button-2", $("#button-2").val());
+    console.log("#button-3", $("#button-3").val());
+    console.log("#button-4", $("#button-4").val());
+
+    $(".button").click(function(){questionClick(correct, buttons)});
   }
 
-  function questionClick(correct){
+  
+
+    function check(correct, buttons, random){
+        // if a buttons text is equal to correct do not change other buttons to correct
+  
+        if($("#button-1").val() !== correct || $("#button-2").val() !== correct || $("#button-3").val() !== correct || $("#button-4").val() !== correct){
+            var buttons = "#button-" + random;
+            $(buttons).text(correct);
+            $(buttons).val(correct);
+            // why does this change no matter if correct is already on
+        }
+    }
+
+  function questionClick(correct, buttons){
       //console.log(currentQuestionIndex);
-      if(this.value !== correct){
+    var btn = $(buttons).val();
+    console.log("btn click", btn);
+      if(btn !== correct){
           //incorrect;
           var wrong=0;
           wrong=wrong+1;
       }
       else{
           //correct
-          var totalPoints=0;
           totalPoints=totalPoints+1;
-          console.log("points", totalPoints);
+          //console.log("points", totalPoints);
       }
-      console.log("correct",correct);
+      console.log("points", totalPoints);
+      //console.log("correct",correct);
       currentQuestionIndex=currentQuestionIndex+1;
-      console.log(currentQuestionIndex);
+      console.log("# Q", currentQuestionIndex);
 
       if (currentQuestionIndex > 4) {
         quizEnd();
