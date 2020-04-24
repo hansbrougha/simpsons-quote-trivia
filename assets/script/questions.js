@@ -31,11 +31,35 @@ $.ajax({
     console.log(quotes);
     console.log(characters);
 
+    //Keep track of correct answers
+    var count=0
+    console.log(count)
+
+    var correctAnswer = Math.floor(Math.random()* (9 - 1) + 1);
+
+    function incorrectAnswer (){
+    var wrongAnswer = Math.floor(Math.random()* (9- 1) + 1)   
+        return wrongAnswer;  
+    }
+    if (correctAnswer=wrongAnswer){
+        wrongAnswer+1}
+    console.log(incorrectAnswer())
+
+    console.log(correctAnswer)
+    //Display quote
+    $('#char-quote').text(quotes[correctAnswer])
+
     // Display character on button
-
+    $('#answer1').text(characters[correctAnswer]).attr('value','correct')
+    $('#answer2').text(characters[incorrectAnswer()])
+    $('#answer3').text(characters[incorrectAnswer()])
+    $('#answer4').text(characters[incorrectAnswer()])
     
-
-    // Display character on button randomly
+    //update score if correct
+    $( "button[value*='correct']").click(function(){
+    count=count+1
+    console.log(count)
+    });
 
 });
 //}

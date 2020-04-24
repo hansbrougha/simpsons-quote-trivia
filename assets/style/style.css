@@ -68,6 +68,11 @@ li {
   background-color: rgb(206, 168, 0);
 }
 
+input{
+  height: 40px;
+  font-size: 20px;
+}
+
 .graphic {
   width: 30%;
   margin: 0 auto;
