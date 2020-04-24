@@ -1,6 +1,7 @@
 $(document).ready(function(){
 // Do until 4 unique characters and quotes
 
+
 var characters = JSON.parse(window.localStorage.getItem("characters")) || [""];
 var quotes = JSON.parse(window.localStorage.getItem("quotes")) || [""];
 
@@ -30,6 +31,7 @@ for(var i = 0; i < 6; i++){
                         characters.push(response[z].character);
                         quotes.push(response[z].quote);
                     }
+
                 }
             }
         }

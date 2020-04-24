@@ -26,7 +26,7 @@ $("#submitName").on("click", function () {
 function printHighscores() {
     // either get scores from localstorage or set to empty array
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
-
+    $("#high-score-list").empty();
     // sort highscores by score property in descending order
     highscores.sort(function (a, b) {
         return b.score - a.score;
@@ -34,6 +34,7 @@ function printHighscores() {
 
     highscores.forEach(function (score) {
         // create li tag for each high score
+        
         var liTag = document.createElement("li");
         liTag.textContent = score.playerName + " - " + score.score;
 
