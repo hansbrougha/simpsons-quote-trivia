@@ -37,6 +37,7 @@ for(var i = 0; i < 6; i++){
 //console.log(quotes);
 //console.log(characters);
 
+
 window.localStorage.setItem("characters", JSON.stringify(characters));
 window.localStorage.setItem("quotes", JSON.stringify(quotes));
 
@@ -54,12 +55,8 @@ window.localStorage.setItem("quotes", JSON.stringify(quotes));
 
 // Display character on button randomly
 
-    });
-}
 
-console.log("quotes", quotes);
-console.log("characters", characters);
-
+});
 
 //}
 
