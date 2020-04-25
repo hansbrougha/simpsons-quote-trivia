@@ -1,3 +1,4 @@
+
 // // Do until 4 unique characters and quotes
 
 // var characters = JSON.parse(window.localStorage.getItem("characters")) || [];
@@ -87,7 +88,9 @@ function displayquestion() {
 
 
 
+
     $.ajax({
+
         url: "https://thesimpsonsquoteapi.glitch.me/quotes?count=25",
         method: "GET"
     }).then(function (response) {
@@ -110,6 +113,8 @@ function displayquestion() {
             var btn3val = $("#button-3").val()
             var btn4val = $("#button-4").val()
 
+
+
             
             // will sometimes not place an answer on a button and still have duplicates 
             if (returnedName === btn1val || returnedName === btn2val || returnedName === btn3val || returnedName === btn4val) {
@@ -126,6 +131,38 @@ function displayquestion() {
                 //     console.log("changed to correct", quoteChar)
                 // }
                 
+
+            }
+
+
+// Display character on button
+//for(var i = 0; i<5; i++){
+    //var buttons = "#button-" + JSON.stringify(i);
+   // console.log(buttons)
+    //$(buttons).text(characters[characters.length-i]);
+//}
+
+
+            
+            // will sometimes not place an answer on a button and still have duplicates 
+            if (returnedName === btn1val || returnedName === btn2val || returnedName === btn3val || returnedName === btn4val) {
+                $("#button-" + oldI).text(response[(qnum + 1)].character).attr("value", response[qnum + 1].character);
+                // $("#button-" + oldI).text("dup").val(response[qnum + 1].character);
+                var test = $("#button-" + i).val();
+                // console.log("value dup test", test)
+            } else {
+                $("#button-" + i).text(response[qnum].character).attr("value", response[qnum].character);
+
+                // var elsetest = $("#button-" + i).val();
+                // if (quoteChar !== btn1val || quoteChar !== btn2val || quoteChar !== btn3val || quoteChar !== btn4val) {
+                //     $("#button-" + correctNum).text(quoteChar);
+                //     console.log("changed to correct", quoteChar)
+                // }
+                
+
+
+//$("#quote-here").text(quotes[quotes.length-3]);
+
 
             }
 
@@ -149,7 +186,77 @@ function displayquestion() {
 
         // var correctNum = Math.floor(Math.random()*4)
 
+
         // $("#button-" + correctNum).text(quoteChar);
 
     });
 };
+
+//}
+
+
+
+
+        };
+        // console.log(correctAnswer[0])
+        // console.log("btn1", btn1val);
+        // console.log("btn2", btn2val)
+        // console.log("btn3", btn3val)
+        // console.log("btn4", btn4val)
+
+
+//         var correctNum = Math.floor(Math.random() * 4);
+//         // sometimes will run even though the answer is already a value of a button
+//         if (quoteChar !== btn1val || quoteChar !== btn2val || quoteChar !== btn3val || quoteChar !== btn4val) {
+//             $("#button-" + correctNum).text(quoteChar).attr("value", quoteChar);
+//             // console.log("changed to correct", quoteChar)
+//         }
+
+
+//         // var correctNum = Math.floor(Math.random()*4)
+
+//         // $("#button-" + correctNum).text(quoteChar);
+
+
+    });
+};
+
+  function questionClick(correct, buttons){
+      //console.log(currentQuestionIndex);
+    var btn = $(buttons).val();
+    console.log("btn click", btn);
+      if(btn !== correct){
+          //incorrect;
+          var wrong=0;
+          wrong=wrong+1;
+      }
+      else{
+          //correct
+          totalPoints=totalPoints+1;
+          //console.log("points", totalPoints);
+      }
+      console.log("points", totalPoints);
+      //console.log("correct",correct);
+      currentQuestionIndex=currentQuestionIndex+1;
+      console.log("# Q", currentQuestionIndex);
+
+      if (currentQuestionIndex > 4) {
+        quizEnd();
+      } else {
+        getQuestion();
+      }
+  }
+
+  function quizEnd(){
+      var quotes = [];
+      var characters = [];
+
+  }
+
+
+$("#start-btn").click(function(){getQuestion()});
+
+});
+
+
+
