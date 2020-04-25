@@ -6,7 +6,7 @@ Matt Groening’s The Simpsons was introduced as a full half-hour, animated tele
 
 How are these lines forgettable? Because in 30 years of episodes, dozens of writers, thousands of world and pop culture events, and nearly 50 recurring characters, the lexicon of Simpsons quotations has grown exponentially. Ask any person what their favorite Simpsons character or quote is, and you will almost always receive a different answer. Some of these lines have been hard-coded into our brains for the last quarter century. For some, the knowledge runs deep. This is our intended audience.
 
-We offer this simple Javascript game to the Simpsons connoisseur as a way to show that you are the ultimate authority on The Simpsons. High scores are rewarded with a simpsons gif courtesy of the Giphy Developers API. It’s time to test your knowledge!
+We offer this simple Javascript game to the Simpsons connoisseur as a way to show that you are the ultimate authority on The Simpsons. High scores are rewarded with a Simpsons gif courtesy of the Giphy Developers API. It’s time to test your knowledge!
 
 ## Game Description
 
