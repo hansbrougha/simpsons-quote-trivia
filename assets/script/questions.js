@@ -89,48 +89,6 @@ function displayquestion() {
 
 
 
-$(document).ready(function(){
-// Do until 4 unique characters and quotes
-
-
-var totalPoints=0;
-
-
-var characters = JSON.parse(window.localStorage.getItem("characters")) || [""];
-var quotes = JSON.parse(window.localStorage.getItem("quotes")) || [""];
-
-
-
-
-    $.ajax({
-
-    url: "https://thesimpsonsquoteapi.glitch.me/quotes?count=10",
-    method: "GET"
-    }).then(function(response) {
-        for(var z = 0; z <25; z++){
-            //console.log(response[z].character);
-            var speaker = response[z].character;
-            var quotetext = response[z].quote;
-
-            //console.log(speaker);
-        
-            // check unique character and quote
-
-            for(var i = 0; i < 11; i++){    
-                if(quotes.indexOf(quotetext) === -1){
-                    if(characters.indexOf(speaker) === -1){
-                        characters.push(response[z].character);
-                        quotes.push(response[z].quote);
-                    }
-
-                }
-            }
-        }
-
-//console.log(quotes);
-//console.log(characters);
-
-
     $.ajax({
 
         url: "https://thesimpsonsquoteapi.glitch.me/quotes?count=25",
@@ -138,7 +96,6 @@ var quotes = JSON.parse(window.localStorage.getItem("quotes")) || [""];
     }).then(function (response) {
         // console.log(response)
         var randomNum = Math.floor(Math.random() * 9)
-
 
 
         var quoteResponse = response[randomNum].quote
@@ -155,6 +112,7 @@ var quotes = JSON.parse(window.localStorage.getItem("quotes")) || [""];
             var btn2val = $("#button-2").val()
             var btn3val = $("#button-3").val()
             var btn4val = $("#button-4").val()
+
 
 
             
@@ -202,6 +160,7 @@ var quotes = JSON.parse(window.localStorage.getItem("quotes")) || [""];
                 // }
                 
 
+
 //$("#quote-here").text(quotes[quotes.length-3]);
 
 
@@ -246,17 +205,17 @@ var quotes = JSON.parse(window.localStorage.getItem("quotes")) || [""];
         // console.log("btn4", btn4val)
 
 
-        var correctNum = Math.floor(Math.random() * 4);
-        // sometimes will run even though the answer is already a value of a button
-        if (quoteChar !== btn1val || quoteChar !== btn2val || quoteChar !== btn3val || quoteChar !== btn4val) {
-            $("#button-" + correctNum).text(quoteChar).attr("value", quoteChar);
-            // console.log("changed to correct", quoteChar)
-        }
+//         var correctNum = Math.floor(Math.random() * 4);
+//         // sometimes will run even though the answer is already a value of a button
+//         if (quoteChar !== btn1val || quoteChar !== btn2val || quoteChar !== btn3val || quoteChar !== btn4val) {
+//             $("#button-" + correctNum).text(quoteChar).attr("value", quoteChar);
+//             // console.log("changed to correct", quoteChar)
+//         }
 
 
-        // var correctNum = Math.floor(Math.random()*4)
+//         // var correctNum = Math.floor(Math.random()*4)
 
-        // $("#button-" + correctNum).text(quoteChar);
+//         // $("#button-" + correctNum).text(quoteChar);
 
 
     });
@@ -298,5 +257,6 @@ var quotes = JSON.parse(window.localStorage.getItem("quotes")) || [""];
 $("#start-btn").click(function(){getQuestion()});
 
 });
+
 
 
