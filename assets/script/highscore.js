@@ -19,6 +19,8 @@ $("#submitName").on("click", function () {
         window.localStorage.setItem("highscores", JSON.stringify(highscores));
 
         printHighscores()
+        $("#high-score-modal").attr("class", "is-active");
+        $("#user-input-modal").removeClass("is-active");
     }
 
 });
