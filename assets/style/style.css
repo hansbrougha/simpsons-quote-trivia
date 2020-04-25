@@ -1,0 +1,90 @@
+html {
+  background-color: rgb(228, 186, 0);
+}
+
+.hero {
+  background-color: rgb(206, 168, 0);
+  margin: 0 auto;
+  height: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.hero-body {
+  padding: 0px;
+}
+
+#start-page,
+#user-score {
+  width: 40%;
+  margin: 0 auto;
+  background-color: rgb(206, 168, 0);
+  border-radius: 10px;
+  height: auto;
+  margin-top: 10%;
+  text-align: center;
+  padding: 3%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#user-score {
+  display: none;
+}
+
+.modal-card-head {
+  background-color: rgb(206, 168, 0);
+}
+.modal-card-body {
+  background-color: rgb(107, 134, 255);
+}
+
+li {
+  font-size: 20px;
+  border-bottom: 2px dashed white;
+  color: white;
+  font-weight: bold;
+}
+
+.questions {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+  display: none;
+}
+
+.answer {
+  background-color: rgb(228, 186, 0);
+  border: none;
+  display: block;
+  width: 100%;
+  height: 70px;
+  margin-top: 10px;
+}
+
+.answer:hover {
+  background-color: rgb(206, 168, 0);
+}
+
+input {
+  height: 40px;
+  font-size: 20px;
+}
+
+.graphic {
+  width: 30%;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 10px;
+  height: 80%;
+  text-align: center;
+  position: initial;
+}
+
+.footer {
+  background-color: rgb(206, 168, 0);
+  margin-top: 10%;
+  padding-top: 10px;
+}
