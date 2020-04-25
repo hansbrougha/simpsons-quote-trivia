@@ -197,7 +197,7 @@ function displayquestion() {
 
 
 
-        };
+        //};
         // console.log(correctAnswer[0])
         // console.log("btn1", btn1val);
         // console.log("btn2", btn2val)
@@ -218,8 +218,8 @@ function displayquestion() {
 //         // $("#button-" + correctNum).text(quoteChar);
 
 
-    });
-};
+    //});
+//};
 
   function questionClick(correct, buttons){
       //console.log(currentQuestionIndex);
@@ -254,9 +254,9 @@ function displayquestion() {
   }
 
 
-$("#start-btn").click(function(){getQuestion()});
+//$("#start-btn").click(function(){displayquestion()});
 
-});
+//});
 
 
 
