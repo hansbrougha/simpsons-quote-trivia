@@ -149,9 +149,7 @@ window.localStorage.setItem("quotes", JSON.stringify(quotes));
   }
 
   function quizEnd(){
-      var quotes = [];
-      var characters = [];
-
+    $("#user-input-modal").attr("class", "is-active")
   }
 
 
