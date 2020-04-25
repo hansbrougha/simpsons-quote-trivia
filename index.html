@@ -14,7 +14,7 @@
     <header class="hero">
       <div class="hero-body">
         <div class="container">
-          <img src="assets/images/simpsonsheader.png" />
+          <img src="assets/images/simpsons-sil.png" width="30%" >
           <h1 class="title">
             Simpsons Quote Trivia
           </h1>
@@ -22,7 +22,8 @@
       </div>
     </header>
 
-    <section>
+    <!-- Start page -->
+    <main>
       <div id="start-page">
         <p>
           Think you know your Simpson quotes?<br />
@@ -32,10 +33,11 @@
         <button id="start-btn" class="button is-link">START!</button>
         <button class="button is-info">View High Scores!</button>
       </div>
-    </section>
+    </main>
 
-    <main>
-      <div class="modal">
+    <!-- High score div -->
+    <section >
+      <div id="high-score-modal" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
           <header class="modal-card-head">
@@ -44,43 +46,62 @@
           </header>
           <section class="modal-card-body">
             <ul id="high-score-list">
-              <li>Test 1</li>
-              <li>Test 2</li>
             </ul>
           </section>
+          <img id="gifDiv" src="">
           <footer class="modal-card-foot">
             <button class="button exit-modal">Exit</button>
           </footer>
         </div>
       </div>
-    </main>
+    </section>
 
 
-
+<!-- Score div -->
     <section>
       <div id="user-score">
         <p>You got a score of <span id="total-points"> </span> !</p>
       </div>
-      <div id="gifDiv">
-        
-      </div>
+      <img id="gifDiv" src="">
     </section>
 
+<!-- Questions here -->
     <main class="questions">
       <div class="tile is-parent">
         <article class="tile is-child notification is-link">
+
           <h1 id="quote-here">Quote here</h1>
           <button id="button-1" class="button answer">Answer 1 test</button>
           <button id="button-2" class="button answer">Answer 2 test</button>
           <button id="button-3" class="button answer">Answer 3 test</button>
           <button id="button-4" class="button answer">Answer 4 test</button>
+
           <div class="content">
           </div>
     </main>
     
 
+<!-- Modal for user's name input -->
+<section>
+  <div id="user-input-modal" class="modal" >
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">What should we call you</p>
+        <button class="delete exit-modal" aria-label="close"></button>
+      </header>
+      <input type="text" id="userName" placeholder="Enter Name Here...">
+      <footer class="modal-card-foot">
+        <button class="button exit-modal" id="submitName">submit</button>
+      </footer>
+    </div>
+  </div>
+</section>
     <footer class="footer">
       <div class="content has-text-centered">
+        
+          <img src="assets/images/simpsons-cast.png">
+        
         <p>
           All images are copyright to their respective owners.
           <a href="https://bulma.io">
@@ -100,5 +121,19 @@
 <script src="assets/script/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="assets/script/questions.js"></script>
+<script src="assets/script/conditional.js"></script>
+<script src="assets/script/highscore.js"></script>
+    <script>
+       $.ajax({
+        url: "https://thesimpsonsquoteapi.glitch.me/quotes",
+        method: "GET"
+      })
+        // After data comes back from the request
+        .then(function(response) {
+          console.log(response)
+          console.log(response[0].character)
+        });
+    </script>
+
   </body>
 </html>

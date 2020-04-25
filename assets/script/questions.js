@@ -149,9 +149,7 @@ console.log("characters", characters);
   }
 
   function quizEnd(){
-      var quotes = [];
-      var characters = [];
-
+    $("#user-input-modal").attr("class", "is-active")
   }
 
 
